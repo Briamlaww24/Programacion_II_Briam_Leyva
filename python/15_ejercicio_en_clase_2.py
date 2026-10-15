@@ -14,3 +14,10 @@ class RadarDragon:
 bulma=RadarDragon(3, 2)
 bulma.buscar_esferas()
 
+
+
+
+
+
+
+
