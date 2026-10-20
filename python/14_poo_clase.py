@@ -22,4 +22,4 @@ goku=guerrero("Goku", 9000)
 goku.saludar()
 
 goku.entrenar(100)
-print("Poder de goku es: ", goku.nombre)
+print("Poder de goku es: ", goku.poder)
