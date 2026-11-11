@@ -4,7 +4,7 @@ from catalogo.models.libro import Libro
 
 def libro_list(request):
     libros = Libro.objects.all()
-    return render(request, 'catalogo/libros/libro_list.html', {'libros': libros})
+    return render(request, 'catalogo/categorias/libros/libro_list.html', {'libros': libros})
 
 def create_libro(request):
     if request.method == 'POST':
@@ -14,7 +14,7 @@ def create_libro(request):
             return redirect('libro_list')
     else:
         form = Libroform()
-    return render(request, 'catalogo/libros/libro_form.html', {'form': form})
+    return render(request, 'catalogo/categorias/libros/formulario.html', {'form': form})
 
 def update_libro(request, pk):
     libro = Libro.objects.get(pk=pk)
@@ -25,12 +25,12 @@ def update_libro(request, pk):
             return redirect('libro_list')
     else:
         form = Libroform(instance=libro)
-    return render(request, 'catalogo/libros/libro_form.html', {'form': form})
+    return render(request, 'catalogo/categorias/libros/formulario.html', {'form': form})
 
 def delete_libro(request, pk):
     libro = Libro.objects.get(pk=pk)
     if request.method == 'POST':
         libro.delete()
         return redirect('libro_list')
-    return render(request, 'catalogo/libros/libro_confirm_delete.html', {'libro': libro})
+    return render(request, 'catalogo/categorias/libros/confirm_delete.html', {'libro': libro})
     

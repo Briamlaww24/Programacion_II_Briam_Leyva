@@ -1,7 +1,4 @@
 from django.urls import path
-from ..views import libro_views
-from catalogo.views import create_libro, libro_list, delete_libro, update_libro
-
 from catalogo.views import libro_views
 
 
