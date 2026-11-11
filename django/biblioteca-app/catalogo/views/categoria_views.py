@@ -17,6 +17,6 @@ def categoria_create(request):
     else:
         form = CategoriaForm()
     return render(request,
-                  'formulario.html',
+                  'catalogo/categorias/formulario.html',
                   {'form': form})
 
